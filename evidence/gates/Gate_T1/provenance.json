@@ -1,0 +1,20 @@
+{
+  "gate_id": "Gate_T1",
+  "gate_name": "200 MB CSV Speed & Messy Historian Torture Test",
+  "status": "PASS",
+  "metrics": {
+    "benchmark_file_size_mb": 387.29,
+    "benchmark_rows": 2000000,
+    "duckdb_2m_load_seconds": 0.942,
+    "duckdb_hourly_rollup_seconds": 1.86,
+    "rollup_buckets": 556,
+    "torture_csv_rows_recovered": 120,
+    "torture_header_skip_lines": 3,
+    "torture_scada_bad_tokens_cleaned": 6,
+    "torture_decimal_commas_converted": 354,
+    "torture_iso8000_trust_score": 90.3,
+    "elapsed_seconds": 20.54
+  },
+  "evidence_class": "BENCHMARK_MEASURED",
+  "artifact_files": []
+}

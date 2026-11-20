@@ -1,0 +1,10 @@
+{
+  "epochs_sealed": 3,
+  "unmodified_chain_valid": true,
+  "single_field_tamper_detected": true,
+  "tamper_caught_at_epoch_index": 1,
+  "tamper_governance_stamp": "NOT DECISION-GRADE (EPOCH CONTENT TAMPERED)",
+  "genesis_hash_prefix": "51bbc3561fa0dadc",
+  "head_hash_prefix": "bf91b55d452c4902",
+  "elapsed_seconds": 0.01
+}

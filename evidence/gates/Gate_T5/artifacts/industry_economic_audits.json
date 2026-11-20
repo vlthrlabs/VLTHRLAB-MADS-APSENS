@@ -1,0 +1,50 @@
+[
+  {
+    "preset_id": "power_plant_50hz",
+    "preset_name": "Egbin / Delta 50 Hz Thermal & Gas Power Block (Unit 1)",
+    "mechanism_audited": "generator_stator_insulation",
+    "recommended_action": "Perform stator wedge tightness & partial-discharge outage service",
+    "twin_a_rtf_exposure_usd": 2124000.0,
+    "twin_c_apsens_intervention_cost_usd": 22000.0,
+    "net_avoided_loss_usd": 2102000.0,
+    "net_avoided_loss_ngn": 2942800000.0,
+    "roi_multiple": 11.81,
+    "ledger_reconciles": true
+  },
+  {
+    "preset_id": "oil_gas_flowstation",
+    "preset_name": "FS-ZNA-01 Zanara Onshore Flowstation (OML 148)",
+    "mechanism_audited": "pump_seal_wear",
+    "recommended_action": "Replace mechanical seal cartridge & flush API Plan 11 line",
+    "twin_a_rtf_exposure_usd": 113600.0,
+    "twin_c_apsens_intervention_cost_usd": 4500.0,
+    "net_avoided_loss_usd": 109100.0,
+    "net_avoided_loss_ngn": 152740000.0,
+    "roi_multiple": 1.93,
+    "ledger_reconciles": true
+  },
+  {
+    "preset_id": "water_utilities",
+    "preset_name": "Victoria Municipal Water Treatment & High-Lift Station",
+    "mechanism_audited": "pump_cavitation",
+    "recommended_action": "Clean suction strainer, raise suction tank level & open valve",
+    "twin_a_rtf_exposure_usd": 35000.0,
+    "twin_c_apsens_intervention_cost_usd": 800.0,
+    "net_avoided_loss_usd": 34200.0,
+    "net_avoided_loss_ngn": 47880000.0,
+    "roi_multiple": 22.8,
+    "ledger_reconciles": true
+  },
+  {
+    "preset_id": "manufacturing_plant",
+    "preset_name": "Ogun / Lagos Industrial Process & Cement Line 1",
+    "mechanism_audited": "motor_stator_winding",
+    "recommended_action": "MCSA + Megger insulation test & clean cooling fan duct (50 Hz check)",
+    "twin_a_rtf_exposure_usd": 20200.0,
+    "twin_c_apsens_intervention_cost_usd": 1800.0,
+    "net_avoided_loss_usd": 18400.0,
+    "net_avoided_loss_ngn": 25760000.0,
+    "roi_multiple": 2.92,
+    "ledger_reconciles": true
+  }
+]

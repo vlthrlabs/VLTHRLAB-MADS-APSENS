@@ -1,0 +1,47 @@
+{
+  "schema": "apsens.ledger/1.0",
+  "updated_at": "2026-11-19T13:30:20.172620+00:00",
+  "chain_head": "bf91b55d452c4902eb7e760a4cbf4ad571620398118a9f90d3bfe5f876c891ab",
+  "epoch_count": 3,
+  "epochs": [
+    {
+      "index": 0,
+      "prev_hash": "GENESIS_00000000000000000000000000000000000000000000000000000000",
+      "hash": "51bbc3561fa0dadc0f80e3ee057d3f8aeae382a8e3d4036847a3b13e11c074e9",
+      "n_records": 120,
+      "from_t": 0,
+      "to_t": 0,
+      "sealed_at": "2026-11-19T13:30:20.168901+00:00",
+      "packed": "PMP1.VibrationRMS,1000,2450,GOOD;",
+      "meta": {
+        "n_records": 120
+      }
+    },
+    {
+      "index": 1,
+      "prev_hash": "51bbc3561fa0dadc0f80e3ee057d3f8aeae382a8e3d4036847a3b13e11c074e9",
+      "hash": "e3e3ebcb3c45357b27d12fe0ac61f313e675df4fc65a4ac423b2e1b0c23fb451",
+      "n_records": 120,
+      "from_t": 0,
+      "to_t": 0,
+      "sealed_at": "2026-11-19T13:30:20.170593+00:00",
+      "packed": "PMP1.VibrationRMS,2000,2610,GOOD;",
+      "meta": {
+        "n_records": 120
+      }
+    },
+    {
+      "index": 2,
+      "prev_hash": "e3e3ebcb3c45357b27d12fe0ac61f313e675df4fc65a4ac423b2e1b0c23fb451",
+      "hash": "bf91b55d452c4902eb7e760a4cbf4ad571620398118a9f90d3bfe5f876c891ab",
+      "n_records": 120,
+      "from_t": 0,
+      "to_t": 0,
+      "sealed_at": "2026-11-19T13:30:20.172100+00:00",
+      "packed": "PMP1.VibrationRMS,3000,3850,GOOD;",
+      "meta": {
+        "n_records": 120
+      }
+    }
+  ]
+}

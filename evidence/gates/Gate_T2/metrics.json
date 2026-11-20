@@ -1,0 +1,7 @@
+{
+  "total_mechanisms_tested": 18,
+  "correctly_classified": 18,
+  "classification_accuracy_pct": 100.0,
+  "equipment_classes_covered": 7,
+  "elapsed_seconds": 0.18
+}

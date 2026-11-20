@@ -1,0 +1,9 @@
+{
+  "healthy_regime_shift_cycles": 120,
+  "false_alarms_on_healthy_transitions": 0,
+  "startup_transients_suppressed_m1": 4,
+  "standby_cycles_gated_m6": 3,
+  "instrument_fault_disambiguated_m3": true,
+  "post_overhaul_reanchor_clean_m2": true,
+  "elapsed_seconds": 0.02
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "status": "OK",
+    "dataset": "Zenodo Centrifugal Pump (RAW)",
+    "rows_raw": 35829,
+    "cols_raw": [
+      "Timestamp",
+      "B_ACR_Mot.PV",
+      "B_ACR_Mot.SV",
+      "B_ACR_Mot.TV",
+      "B_ACR_Pmp.PV",
+      "B_ACR_Pmp.SV",
+      "B_ACR_Pmp.TV",
+      "B_Pres.PV"
+    ],
+    "download": {
+      "url": "https://zenodo.org/api/records/15301820/files/B_2024-06-11.csv/content",
+      "local_path": "zenodo_pump_B_2024-06-11.csv",
+      "bytes": 4832416,
+      "mb": 4.83,
+      "elapsed_s": 11.5,
+      "sha256": "7580d0379cf119cec08946b159313e6973554084dca9919276f24e9bce41d833"
+    },
+    "saved": "zenodo_centrifugal_pump_cavitation.parquet"
+  },
+  {
+    "status": "OK",
+    "dataset": "ZeMA Hydraulic Systems (RAW)",
+    "rows_raw": 2205,
+    "selected_cycles": 0,
+    "download": {
+      "url": "https://zenodo.org/api/records/1323611/files/data.zip/content",
+      "local_path": "zema_data.zip",
+      "bytes": 76601704,
+      "mb": 76.6,
+      "elapsed_s": 81.2,
+      "sha256": "24128aad2ee45eea7e6b63ebbd9992cdf25d0483a2cebefbfc13bc69079af1f2"
+    },
+    "saved": "zema_hydraulic_pump_leakage_heldout.parquet"
+  },
+  {
+    "status": "OK",
+    "dataset": "MetroPT-3 Compressor (RAW 45 MB Slice)",
+    "rows_raw": 179629,
+    "cols_raw": [
+      "timestamp",
+      "TP2",
+      "TP3",
+      "H1",
+      "DV_pressure",
+      "Reservoirs",
+      "Oil_temperature",
+      "Flowmeter",
+      "Motor_current",
+      "COMP"
+    ],
+    "download": {
+      "url": "https://zenodo.org/api/records/6854240/files/dataset_train.csv/content",
+      "local_path": "metropt3_raw_slice.csv",
+      "bytes": 28812204,
+      "mb": 28.81,
+      "elapsed_s": 33.41,
+      "sha256": "7336f7a1c2e26586b6b314eebe24ce14fad4ff3c3d3fe4669455ace48e1e63a1"
+    },
+    "saved": "metropt3_compressor_fouling_failure.parquet"
+  },
+  {
+    "status": "OK",
+    "dataset": "Kelmarsh 2.05 MW 50 Hz Generator (RAW 2016)",
+    "rows_raw": 52415,
+    "member": "Turbine_Data_Kelmarsh_1_2016-01-03_-_2017-01-01_228.csv",
+    "download": {
+      "url": "https://zenodo.org/api/records/5841834/files/Kelmarsh_SCADA_2016_3082.zip/content",
+      "local_path": "kelmarsh_2016.zip",
+      "bytes": 97915553,
+      "mb": 97.92,
+      "elapsed_s": 75.04,
+      "sha256": "4e8a73aeb823aeb21a2c7829f14434e44eea523f1d7f9be0177ff1b76e3ded27"
+    },
+    "saved": "kelmarsh_50hz_generator_stator_overload.parquet"
+  },
+  {
+    "status": "OK",
+    "dataset": "Petrobras 3W Oil Well (RAW)",
+    "rows_raw": 28799,
+    "source_file": "SIMULATED_00001.parquet",
+    "download": {
+      "url": "https://raw.githubusercontent.com/petrobras/3W/main/dataset/2/SIMULATED_00001.parquet",
+      "local_path": "SIMULATED_00001.parquet",
+      "bytes": 800964,
+      "mb": 0.8,
+      "elapsed_s": 1.94,
+      "sha256": "743f61fcd36aed3070c817fb035c9ca14aee838126ab55a868da383e31aa4048"
+    },
+    "saved": "petrobras_3w_choke_wax_restriction.parquet"
+  }
+]

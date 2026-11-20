@@ -1,0 +1,509 @@
+{
+  "run_id": "RUN_20261119_132957_7gate_validation",
+  "task_type": "7gate_validation",
+  "timestamp_utc": "2026-11-19T13:30:20Z",
+  "maturity_grade": "BUILT_SYSTEM",
+  "suite_name": "APSENS 7-Gate Lab Validation Suite",
+  "overall_status": "PARTIAL",
+  "total_gates": 7,
+  "gates_passed": 6,
+  "total_elapsed_seconds": 22.55,
+  "host_environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.11",
+    "code_manifest_sha256": "667f77090a37aa2767414f9fc946cda2663fa3ae8d1170c525e241eda60c3877"
+  },
+  "gates": [
+    {
+      "gate_id": "Gate_T1",
+      "gate_name": "200 MB CSV Speed & Messy Historian Torture Test",
+      "status": "PASS",
+      "metrics": {
+        "benchmark_file_size_mb": 387.29,
+        "benchmark_rows": 2000000,
+        "duckdb_2m_load_seconds": 0.942,
+        "duckdb_hourly_rollup_seconds": 1.86,
+        "rollup_buckets": 556,
+        "torture_csv_rows_recovered": 120,
+        "torture_header_skip_lines": 3,
+        "torture_scada_bad_tokens_cleaned": 6,
+        "torture_decimal_commas_converted": 354,
+        "torture_iso8000_trust_score": 90.3,
+        "elapsed_seconds": 20.54
+      },
+      "evidence_class": "BENCHMARK_MEASURED"
+    },
+    {
+      "gate_id": "Gate_T2",
+      "gate_name": "18/18 Mechanism Causal & Directional Discrimination Gate",
+      "status": "PASS",
+      "metrics": {
+        "total_mechanisms_tested": 18,
+        "correctly_classified": 18,
+        "classification_accuracy_pct": 100.0,
+        "equipment_classes_covered": 7,
+        "elapsed_seconds": 0.18
+      },
+      "mechanism_breakdown": [
+        {
+          "mechanism_id": "bearing_outer_race",
+          "equipment_type": "bearing",
+          "diagnosed_mechanism": "bearing_outer_race",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "kurtosis",
+          "expected_first_movers": [
+            "kurtosis"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "bearing_inner_race",
+          "equipment_type": "bearing",
+          "diagnosed_mechanism": "bearing_inner_race",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "rms",
+          "expected_first_movers": [
+            "rms",
+            "envelope_rms"
+          ],
+          "state_label": "CRITICAL"
+        },
+        {
+          "mechanism_id": "bearing_lubrication_loss",
+          "equipment_type": "bearing",
+          "diagnosed_mechanism": "bearing_lubrication_loss",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "temperature",
+          "expected_first_movers": [
+            "temperature"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "bearing_misalignment",
+          "equipment_type": "bearing",
+          "diagnosed_mechanism": "bearing_misalignment",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "dominant_freq",
+          "expected_first_movers": [
+            "dominant_freq"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "pump_cavitation",
+          "equipment_type": "pump",
+          "diagnosed_mechanism": "pump_cavitation",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff",
+            "psd_kurtosis"
+          ],
+          "state_label": "CRITICAL"
+        },
+        {
+          "mechanism_id": "pump_seal_wear",
+          "equipment_type": "pump",
+          "diagnosed_mechanism": "pump_seal_wear",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "temperature",
+          "expected_first_movers": [
+            "temperature"
+          ],
+          "state_label": "PROGRESSIVE"
+        },
+        {
+          "mechanism_id": "pump_valve_seat_wear",
+          "equipment_type": "pump",
+          "diagnosed_mechanism": "pump_valve_seat_wear",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "pump_plunger_packing",
+          "equipment_type": "pump",
+          "diagnosed_mechanism": "pump_plunger_packing",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "temperature",
+          "expected_first_movers": [
+            "temperature",
+            "rms"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "compressor_surge",
+          "equipment_type": "compressor",
+          "diagnosed_mechanism": "compressor_surge",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff",
+            "crest_factor"
+          ],
+          "state_label": "CRITICAL"
+        },
+        {
+          "mechanism_id": "compressor_fouling",
+          "equipment_type": "compressor",
+          "diagnosed_mechanism": "compressor_fouling",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff",
+            "temperature"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "motor_stator_winding",
+          "equipment_type": "motor",
+          "diagnosed_mechanism": "motor_stator_winding",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "motor_current",
+          "expected_first_movers": [
+            "motor_current",
+            "temperature"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "motor_rotor_bar",
+          "equipment_type": "motor",
+          "diagnosed_mechanism": "motor_rotor_bar",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "motor_current",
+          "expected_first_movers": [
+            "motor_current"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "valve_choke_fouling",
+          "equipment_type": "valve",
+          "diagnosed_mechanism": "valve_choke_fouling",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff"
+          ],
+          "state_label": "PROGRESSIVE"
+        },
+        {
+          "mechanism_id": "valve_seat_erosion",
+          "equipment_type": "valve",
+          "diagnosed_mechanism": "valve_seat_erosion",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff"
+          ],
+          "state_label": "PROGRESSIVE"
+        },
+        {
+          "mechanism_id": "fan_impeller_imbalance",
+          "equipment_type": "fan",
+          "diagnosed_mechanism": "fan_impeller_imbalance",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "dominant_freq",
+          "expected_first_movers": [
+            "dominant_freq",
+            "rms"
+          ],
+          "state_label": "ACCELERATED"
+        },
+        {
+          "mechanism_id": "fan_aerodynamic_stall",
+          "equipment_type": "fan",
+          "diagnosed_mechanism": "fan_aerodynamic_stall",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff",
+            "psd_kurtosis"
+          ],
+          "state_label": "CRITICAL"
+        },
+        {
+          "mechanism_id": "generator_stator_insulation",
+          "equipment_type": "generator_turbine",
+          "diagnosed_mechanism": "generator_stator_insulation",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "temperature",
+          "expected_first_movers": [
+            "temperature",
+            "motor_current"
+          ],
+          "state_label": "CRITICAL"
+        },
+        {
+          "mechanism_id": "turbine_blade_fouling_erosion",
+          "equipment_type": "generator_turbine",
+          "diagnosed_mechanism": "turbine_blade_fouling_erosion",
+          "matched": true,
+          "confidence": 0.99,
+          "first_mover": "pressure_diff",
+          "expected_first_movers": [
+            "pressure_diff",
+            "rms"
+          ],
+          "state_label": "CRITICAL"
+        }
+      ],
+      "evidence_class": "BENCHMARK_MEASURED"
+    },
+    {
+      "gate_id": "Gate_T3",
+      "gate_name": "Regime-Shift, Startup Transient (M1), Re-Anchor (M2) & Sensor Fault (M3) Gate",
+      "status": "PASS",
+      "metrics": {
+        "healthy_regime_shift_cycles": 120,
+        "false_alarms_on_healthy_transitions": 0,
+        "startup_transients_suppressed_m1": 4,
+        "standby_cycles_gated_m6": 3,
+        "instrument_fault_disambiguated_m3": true,
+        "post_overhaul_reanchor_clean_m2": true,
+        "elapsed_seconds": 0.02
+      },
+      "evidence_class": "BENCHMARK_MEASURED"
+    },
+    {
+      "gate_id": "Gate_T4",
+      "gate_name": "Blind Held-Out Generalization & 56h Mobilization Lead-Time Gate",
+      "status": "FAIL",
+      "metrics": {
+        "heldout_benchmarks_evaluated": 7,
+        "raw_public_measured_count": 7,
+        "doi_calibrated_count": 0,
+        "early_detection_recall_pct": 100.0,
+        "mechanism_diagnostic_accuracy_pct": 28.57,
+        "mean_detection_lead_time_hours": 409.2,
+        "mean_roc_auc": 0.8654,
+        "min_detection_lead_time_hours": 31.5,
+        "elapsed_seconds": 1.74
+      },
+      "benchmark_runs": [
+        {
+          "benchmark_name": "Stage 1 NASA IMS 7-Day Bearing RTF",
+          "file": "REPLAY_NASA_IMS_7DAY_BEARING_FAILURE.csv",
+          "file_sha256": "ce15cc52c936dd65679cdffc1db3ef8bf8830c3abef0c3902615540a0dd7d8d3",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "bearing",
+          "true_mechanism": "bearing_outer_race",
+          "diagnosed_mechanism": "bearing_lubrication_loss",
+          "mechanism_match": false,
+          "lead_time_hours": 558.0,
+          "beats_56h_mobilization": true,
+          "roc_auc": 0.9962,
+          "avoided_loss_usd": 2209500.0,
+          "avoided_loss_ngn": 3093300000.0
+        },
+        {
+          "benchmark_name": "Stage 1 CWRU Inner Race Defect (IR007)",
+          "file": "cwru_12k_Drive_End_IR007_0_105.parquet",
+          "file_sha256": "69ba662d650b90cc953f84c8f9e59d1dd29e3072b1b3d5c7307127f9f6d0aa33",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "bearing",
+          "true_mechanism": "bearing_inner_race",
+          "diagnosed_mechanism": "bearing_inner_race",
+          "mechanism_match": true,
+          "lead_time_hours": 31.5,
+          "beats_56h_mobilization": false,
+          "roc_auc": 1.0,
+          "avoided_loss_usd": 15200.0,
+          "avoided_loss_ngn": 21280000.0
+        },
+        {
+          "benchmark_name": "Stage 1 ZeMA Hydraulic Pump Leakage (RAW 2,205 cycles)",
+          "file": "zema_hydraulic_pump_leakage_heldout.parquet",
+          "file_sha256": "7cf8281187cc3ef41345fe6d3a013af563f8ef34f1591fb1a8ea0309e6ef3141",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "pump",
+          "true_mechanism": "pump_valve_seat_wear",
+          "diagnosed_mechanism": "bearing_outer_race",
+          "mechanism_match": false,
+          "lead_time_hours": 259.5,
+          "beats_56h_mobilization": true,
+          "roc_auc": 0.911,
+          "avoided_loss_usd": 11575.0,
+          "avoided_loss_ngn": 16205000.0
+        },
+        {
+          "benchmark_name": "Stage 2 MetroPT-3 Compressor Failure (RAW 179,629 rows)",
+          "file": "REPLAY_METROPT3_COMPRESSOR_FAILURE_30DAY.csv",
+          "file_sha256": "26b8608f880fe77d1d7b6a2dee8da0736f0f39cc3c0477b285c55c87a66aa88d",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "compressor",
+          "true_mechanism": "compressor_fouling",
+          "diagnosed_mechanism": "compressor_surge",
+          "mechanism_match": false,
+          "lead_time_hours": 637.0,
+          "beats_56h_mobilization": true,
+          "roc_auc": 0.9851,
+          "avoided_loss_usd": 37300.0,
+          "avoided_loss_ngn": 52220000.0
+        },
+        {
+          "benchmark_name": "Stage 2 Zenodo Centrifugal Pump (RAW 35,829 rows)",
+          "file": "zenodo_centrifugal_pump_cavitation.parquet",
+          "file_sha256": "d7b71cfed6f9d4b58f73d238c919942578b0c645e230df2ffa782fe1e8937ade",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "pump",
+          "true_mechanism": "pump_cavitation",
+          "diagnosed_mechanism": "pump_seal_wear",
+          "mechanism_match": false,
+          "lead_time_hours": 259.5,
+          "beats_56h_mobilization": true,
+          "roc_auc": 0.4544,
+          "avoided_loss_usd": 31340.0,
+          "avoided_loss_ngn": 43876000.0
+        },
+        {
+          "benchmark_name": "Stage 3 Kelmarsh 50 Hz Generator SCADA (RAW 52,415 rows)",
+          "file": "REPLAY_KELMARSH_50HZ_POWER_GENERATOR_FAULT.csv",
+          "file_sha256": "5f89846961cfe2d56657c0dcfc64304192d2a085083e05d0603761e80adb14a8",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "generator_turbine",
+          "true_mechanism": "generator_stator_insulation",
+          "diagnosed_mechanism": "turbine_blade_fouling_erosion",
+          "mechanism_match": false,
+          "lead_time_hours": 600.0,
+          "beats_56h_mobilization": true,
+          "roc_auc": 0.7181,
+          "avoided_loss_usd": 1972500.0,
+          "avoided_loss_ngn": 2761500000.0
+        },
+        {
+          "benchmark_name": "Stage 3 Petrobras 3W Offshore Well (RAW 28,799 rows)",
+          "file": "REPLAY_PETROBRAS_3W_WELL_CHOKE_RESTRICTION.csv",
+          "file_sha256": "1bc89c0a058f0a090d0ec016c2ad2d133aa53d039f5dd0ee1f878b1c6dd96b2c",
+          "evidence_class": "BENCHMARK_MEASURED",
+          "equipment_type": "valve",
+          "true_mechanism": "valve_seat_erosion",
+          "diagnosed_mechanism": "valve_seat_erosion",
+          "mechanism_match": true,
+          "lead_time_hours": 519.0,
+          "beats_56h_mobilization": true,
+          "roc_auc": 0.9929,
+          "avoided_loss_usd": 81100.0,
+          "avoided_loss_ngn": 113540000.0
+        }
+      ],
+      "evidence_class": "BENCHMARK_MEASURED (7/7 Raw Public Benchmarks)"
+    },
+    {
+      "gate_id": "Gate_T5",
+      "gate_name": "Paired 3-Twin Financial Ledger & Multi-Industry Economic Reconciliation Gate",
+      "status": "PASS",
+      "metrics": {
+        "industries_audited": 4,
+        "all_ledgers_reconcile": true,
+        "fx_rate_ngn_per_usd": 1400.0,
+        "elapsed_seconds": 0.0
+      },
+      "industry_economic_audits": [
+        {
+          "preset_id": "power_plant_50hz",
+          "preset_name": "Egbin / Delta 50 Hz Thermal & Gas Power Block (Unit 1)",
+          "mechanism_audited": "generator_stator_insulation",
+          "recommended_action": "Perform stator wedge tightness & partial-discharge outage service",
+          "twin_a_rtf_exposure_usd": 2124000.0,
+          "twin_c_apsens_intervention_cost_usd": 22000.0,
+          "net_avoided_loss_usd": 2102000.0,
+          "net_avoided_loss_ngn": 2942800000.0,
+          "roi_multiple": 11.81,
+          "ledger_reconciles": true
+        },
+        {
+          "preset_id": "oil_gas_flowstation",
+          "preset_name": "FS-ZNA-01 Zanara Onshore Flowstation (OML 148)",
+          "mechanism_audited": "pump_seal_wear",
+          "recommended_action": "Replace mechanical seal cartridge & flush API Plan 11 line",
+          "twin_a_rtf_exposure_usd": 113600.0,
+          "twin_c_apsens_intervention_cost_usd": 4500.0,
+          "net_avoided_loss_usd": 109100.0,
+          "net_avoided_loss_ngn": 152740000.0,
+          "roi_multiple": 1.93,
+          "ledger_reconciles": true
+        },
+        {
+          "preset_id": "water_utilities",
+          "preset_name": "Victoria Municipal Water Treatment & High-Lift Station",
+          "mechanism_audited": "pump_cavitation",
+          "recommended_action": "Clean suction strainer, raise suction tank level & open valve",
+          "twin_a_rtf_exposure_usd": 35000.0,
+          "twin_c_apsens_intervention_cost_usd": 800.0,
+          "net_avoided_loss_usd": 34200.0,
+          "net_avoided_loss_ngn": 47880000.0,
+          "roi_multiple": 22.8,
+          "ledger_reconciles": true
+        },
+        {
+          "preset_id": "manufacturing_plant",
+          "preset_name": "Ogun / Lagos Industrial Process & Cement Line 1",
+          "mechanism_audited": "motor_stator_winding",
+          "recommended_action": "MCSA + Megger insulation test & clean cooling fan duct (50 Hz check)",
+          "twin_a_rtf_exposure_usd": 20200.0,
+          "twin_c_apsens_intervention_cost_usd": 1800.0,
+          "net_avoided_loss_usd": 18400.0,
+          "net_avoided_loss_ngn": 25760000.0,
+          "roi_multiple": 2.92,
+          "ledger_reconciles": true
+        }
+      ],
+      "evidence_class": "SIMULATED"
+    },
+    {
+      "gate_id": "Gate_T6",
+      "gate_name": "SHA-256 Hash-Chained Epoch Tamper-Evidence Gate",
+      "status": "PASS",
+      "metrics": {
+        "epochs_sealed": 3,
+        "unmodified_chain_valid": true,
+        "single_field_tamper_detected": true,
+        "tamper_caught_at_epoch_index": 1,
+        "tamper_governance_stamp": "NOT DECISION-GRADE (EPOCH CONTENT TAMPERED)",
+        "genesis_hash_prefix": "51bbc3561fa0dadc",
+        "head_hash_prefix": "bf91b55d452c4902",
+        "elapsed_seconds": 0.01
+      },
+      "evidence_class": "BENCHMARK_MEASURED"
+    },
+    {
+      "gate_id": "Gate_T7",
+      "gate_name": "Windows Application Control Immunity, Resource Headroom & Code Integrity Gate",
+      "status": "PASS",
+      "metrics": {
+        "active_ml_backend": "numpy_scipy_blas_whitelisted",
+        "wdac_application_control_safe": true,
+        "source_files_sealed_in_manifest": 60,
+        "manifest_file": "APSENS_CODE_MANIFEST.sha256",
+        "manifest_sha256": "667f77090a37aa2767414f9fc946cda2663fa3ae8d1170c525e241eda60c3877",
+        "elapsed_seconds": 0.02
+      },
+      "evidence_class": "BENCHMARK_MEASURED"
+    }
+  ]
+}

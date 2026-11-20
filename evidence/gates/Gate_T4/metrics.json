@@ -1,0 +1,11 @@
+{
+  "heldout_benchmarks_evaluated": 7,
+  "raw_public_measured_count": 7,
+  "doi_calibrated_count": 0,
+  "early_detection_recall_pct": 100.0,
+  "mechanism_diagnostic_accuracy_pct": 28.57,
+  "mean_detection_lead_time_hours": 409.2,
+  "mean_roc_auc": 0.8654,
+  "min_detection_lead_time_hours": 31.5,
+  "elapsed_seconds": 1.74
+}

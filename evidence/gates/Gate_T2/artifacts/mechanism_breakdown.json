@@ -1,0 +1,228 @@
+[
+  {
+    "mechanism_id": "bearing_outer_race",
+    "equipment_type": "bearing",
+    "diagnosed_mechanism": "bearing_outer_race",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "kurtosis",
+    "expected_first_movers": [
+      "kurtosis"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "bearing_inner_race",
+    "equipment_type": "bearing",
+    "diagnosed_mechanism": "bearing_inner_race",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "rms",
+    "expected_first_movers": [
+      "rms",
+      "envelope_rms"
+    ],
+    "state_label": "CRITICAL"
+  },
+  {
+    "mechanism_id": "bearing_lubrication_loss",
+    "equipment_type": "bearing",
+    "diagnosed_mechanism": "bearing_lubrication_loss",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "temperature",
+    "expected_first_movers": [
+      "temperature"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "bearing_misalignment",
+    "equipment_type": "bearing",
+    "diagnosed_mechanism": "bearing_misalignment",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "dominant_freq",
+    "expected_first_movers": [
+      "dominant_freq"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "pump_cavitation",
+    "equipment_type": "pump",
+    "diagnosed_mechanism": "pump_cavitation",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff",
+      "psd_kurtosis"
+    ],
+    "state_label": "CRITICAL"
+  },
+  {
+    "mechanism_id": "pump_seal_wear",
+    "equipment_type": "pump",
+    "diagnosed_mechanism": "pump_seal_wear",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "temperature",
+    "expected_first_movers": [
+      "temperature"
+    ],
+    "state_label": "PROGRESSIVE"
+  },
+  {
+    "mechanism_id": "pump_valve_seat_wear",
+    "equipment_type": "pump",
+    "diagnosed_mechanism": "pump_valve_seat_wear",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "pump_plunger_packing",
+    "equipment_type": "pump",
+    "diagnosed_mechanism": "pump_plunger_packing",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "temperature",
+    "expected_first_movers": [
+      "temperature",
+      "rms"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "compressor_surge",
+    "equipment_type": "compressor",
+    "diagnosed_mechanism": "compressor_surge",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff",
+      "crest_factor"
+    ],
+    "state_label": "CRITICAL"
+  },
+  {
+    "mechanism_id": "compressor_fouling",
+    "equipment_type": "compressor",
+    "diagnosed_mechanism": "compressor_fouling",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff",
+      "temperature"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "motor_stator_winding",
+    "equipment_type": "motor",
+    "diagnosed_mechanism": "motor_stator_winding",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "motor_current",
+    "expected_first_movers": [
+      "motor_current",
+      "temperature"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "motor_rotor_bar",
+    "equipment_type": "motor",
+    "diagnosed_mechanism": "motor_rotor_bar",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "motor_current",
+    "expected_first_movers": [
+      "motor_current"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "valve_choke_fouling",
+    "equipment_type": "valve",
+    "diagnosed_mechanism": "valve_choke_fouling",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff"
+    ],
+    "state_label": "PROGRESSIVE"
+  },
+  {
+    "mechanism_id": "valve_seat_erosion",
+    "equipment_type": "valve",
+    "diagnosed_mechanism": "valve_seat_erosion",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff"
+    ],
+    "state_label": "PROGRESSIVE"
+  },
+  {
+    "mechanism_id": "fan_impeller_imbalance",
+    "equipment_type": "fan",
+    "diagnosed_mechanism": "fan_impeller_imbalance",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "dominant_freq",
+    "expected_first_movers": [
+      "dominant_freq",
+      "rms"
+    ],
+    "state_label": "ACCELERATED"
+  },
+  {
+    "mechanism_id": "fan_aerodynamic_stall",
+    "equipment_type": "fan",
+    "diagnosed_mechanism": "fan_aerodynamic_stall",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff",
+      "psd_kurtosis"
+    ],
+    "state_label": "CRITICAL"
+  },
+  {
+    "mechanism_id": "generator_stator_insulation",
+    "equipment_type": "generator_turbine",
+    "diagnosed_mechanism": "generator_stator_insulation",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "temperature",
+    "expected_first_movers": [
+      "temperature",
+      "motor_current"
+    ],
+    "state_label": "CRITICAL"
+  },
+  {
+    "mechanism_id": "turbine_blade_fouling_erosion",
+    "equipment_type": "generator_turbine",
+    "diagnosed_mechanism": "turbine_blade_fouling_erosion",
+    "matched": true,
+    "confidence": 0.99,
+    "first_mover": "pressure_diff",
+    "expected_first_movers": [
+      "pressure_diff",
+      "rms"
+    ],
+    "state_label": "CRITICAL"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "active_ml_backend": "numpy_scipy_blas_whitelisted",
+  "wdac_application_control_safe": true,
+  "source_files_sealed_in_manifest": 60,
+  "manifest_file": "APSENS_CODE_MANIFEST.sha256",
+  "manifest_sha256": "667f77090a37aa2767414f9fc946cda2663fa3ae8d1170c525e241eda60c3877",
+  "elapsed_seconds": 0.02
+}
