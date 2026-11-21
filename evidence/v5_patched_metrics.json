@@ -1,0 +1,518 @@
+{
+  "run_id": "RUN_20261121_115035_apsens_v5_patched_audit",
+  "elapsed_s": 542.71,
+  "bugs_fixed": [
+    "BUG-V5-01: Removed synthetic NASA_IMS waveform stub; 100% real accelerometer data (HUST 99 + Ottawa 60 + XJTU-SY 120 = 279 real recordings, n0 = 87 real healthy operating runs)",
+    "BUG-V5-02: Fixed COT angular resampling frequency axis in extract_csc_block to use shaft orders (cycles/rev) instead of time Hz",
+    "BUG-V5-03: Grouped MAFAULDA fault recordings by (fault_class + condition_path) so all 49 speeds of each held-out fault severity stay in the same fold",
+    "BUG-V5-04: Wired IntegrativeConformalGate (Liang, Sesia & Sun 2024) + exact finite-sample conformal quantile ceil((n0+1)(1-alpha))/n0",
+    "BUG-V5-05: Fixed HUST physical_bearing_id to group the 3 load runs (0, 200, 400 W) of each physical normal bearing specimen (N4..N8 = 5 physical bearings)",
+    "BUG-V5-06: Fixed WeibullOpenSetGate to use Ledoit-Wolf class-covariance-whitened Mahalanobis distances + scipy.stats.weibull_min.fit",
+    "BUG-V5-07: Initialized inner-CV score buffers with NaN so skipped inner folds never inject false zeros into threshold calibration"
+  ],
+  "checkpoint_file": "models\\apsens_v5_rotating_ref.npz",
+  "checkpoint_sha256": "8b1e1e869d82c89dc8b55ce843925c480a635bf4d701ed59844aa584ee7910c9",
+  "qa_gates": {
+    "QA_Gate_1_Real_Data_And_Quarantine": {
+      "HUST_real_mat": 99,
+      "Ottawa_real_mat": 60,
+      "XJTU_real_csv_pool": 120,
+      "MAFAULDA_quarantined": 1951,
+      "synthetic_rows": 0
+    },
+    "QA_Gate_2_Zero_Leakage_Group_Disjoint": "PASS",
+    "QA_Gate_3_Signal_Physics_Unit_Tests": {
+      "gate": "QA_Gate_3_Signal_Physics",
+      "status": "PASS",
+      "cot_order_snr_gain_db": 10.14,
+      "cpw_fault_to_shaft_ratio_before": 0.0071,
+      "cpw_fault_to_shaft_ratio_after": 1.6328,
+      "scale_invariance_1000x_max_diff": 7.702283255639486e-11
+    },
+    "QA_Gate_4_Zero_Pickle_RoundTrip_MaxDiff": 0.0,
+    "QA_Gate_5_Label_Permutation_30Draw_Mean_AUC": 0.4848
+  },
+  "E1_Pool_Base_HUST_Ottawa_53Feat": {
+    "P1": {
+      "n_total": 159,
+      "healthy_runs_n0": 27,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.037,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0009,
+        0.1897
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.164,
+      "fault_n1": 132,
+      "fault_tp": 116,
+      "oof_fault_recall": 0.8788,
+      "oof_fault_recall_95ci": [
+        0.8106,
+        0.9291
+      ],
+      "oof_roc_auc": 0.9823,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 9,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0028,
+        0.4825
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.4291
+    },
+    "P2": {
+      "n_total": 159,
+      "healthy_runs_n0": 27,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.037,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0009,
+        0.1897
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.164,
+      "fault_n1": 132,
+      "fault_tp": 106,
+      "oof_fault_recall": 0.803,
+      "oof_fault_recall_95ci": [
+        0.7249,
+        0.8671
+      ],
+      "oof_roc_auc": 0.9711,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 9,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0028,
+        0.4825
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.4291
+    },
+    "P3": {
+      "n_total": 159,
+      "healthy_runs_n0": 27,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.037,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0009,
+        0.1897
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.164,
+      "fault_n1": 132,
+      "fault_tp": 92,
+      "oof_fault_recall": 0.697,
+      "oof_fault_recall_95ci": [
+        0.611,
+        0.7739
+      ],
+      "oof_roc_auc": 0.9826,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 9,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0028,
+        0.4825
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.4291
+    },
+    "P4": {
+      "n_total": 159,
+      "healthy_runs_n0": 27,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.037,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0009,
+        0.1897
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.164,
+      "fault_n1": 132,
+      "fault_tp": 91,
+      "oof_fault_recall": 0.6894,
+      "oof_fault_recall_95ci": [
+        0.603,
+        0.767
+      ],
+      "oof_roc_auc": 0.9711,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 9,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0028,
+        0.4825
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.4291
+    },
+    "statistical_comparisons": {
+      "P1_vs_P4": {
+        "delong": {
+          "auc_a": 0.9823,
+          "auc_b": 0.9711,
+          "delta_auc": 0.0112,
+          "z": 1.4309,
+          "p_value": 0.152472
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 26,
+          "a_wrong_b_right": 1,
+          "p_value": 0.0
+        },
+        "holm_adjusted_delong_p": 0.394047
+      },
+      "P2_vs_P4": {
+        "delong": {
+          "auc_a": 0.9711,
+          "auc_b": 0.9711,
+          "delta_auc": 0.0,
+          "z": 0.0,
+          "p_value": 1.0
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 18,
+          "a_wrong_b_right": 3,
+          "p_value": 0.00149
+        },
+        "holm_adjusted_delong_p": 1.0
+      },
+      "P3_vs_P4": {
+        "delong": {
+          "auc_a": 0.9826,
+          "auc_b": 0.9711,
+          "delta_auc": 0.0115,
+          "z": 1.5088,
+          "p_value": 0.131349
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 11,
+          "a_wrong_b_right": 10,
+          "p_value": 1.0
+        },
+        "holm_adjusted_delong_p": 0.394047
+      }
+    }
+  },
+  "E2_MAFAULDA_SeverityGrouped_64Feat": {
+    "P1": {
+      "n_total": 1951,
+      "healthy_runs_n0": 49,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.0204,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0005,
+        0.1085
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.0932,
+      "fault_n1": 1902,
+      "fault_tp": 1902,
+      "oof_fault_recall": 1.0,
+      "oof_fault_recall_95ci": [
+        0.9981,
+        1.0
+      ],
+      "oof_roc_auc": 0.9993,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 49,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0005,
+        0.1085
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.0932
+    },
+    "P2": {
+      "n_total": 1951,
+      "healthy_runs_n0": 49,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.0204,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0005,
+        0.1085
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.0932,
+      "fault_n1": 1902,
+      "fault_tp": 1864,
+      "oof_fault_recall": 0.98,
+      "oof_fault_recall_95ci": [
+        0.9727,
+        0.9858
+      ],
+      "oof_roc_auc": 0.996,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 49,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0005,
+        0.1085
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.0932
+    },
+    "P3": {
+      "n_total": 1951,
+      "healthy_runs_n0": 49,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.0204,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0005,
+        0.1085
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.0932,
+      "fault_n1": 1902,
+      "fault_tp": 1902,
+      "oof_fault_recall": 1.0,
+      "oof_fault_recall_95ci": [
+        0.9981,
+        1.0
+      ],
+      "oof_roc_auc": 0.9997,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 49,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0005,
+        0.1085
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.0932
+    },
+    "P4": {
+      "n_total": 1951,
+      "healthy_runs_n0": 49,
+      "healthy_fp": 3,
+      "oof_healthy_far": 0.0612,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0128,
+        0.1687
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.1507,
+      "fault_n1": 1902,
+      "fault_tp": 1900,
+      "oof_fault_recall": 0.9989,
+      "oof_fault_recall_95ci": [
+        0.9962,
+        0.9999
+      ],
+      "oof_roc_auc": 0.9989,
+      "passes_far5_auc95": false,
+      "physical_bearings_n": 49,
+      "physical_bearings_fp": 3,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0128,
+        0.1687
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.1507
+    },
+    "statistical_comparisons": {
+      "P1_vs_P4": {
+        "delong": {
+          "auc_a": 0.9993,
+          "auc_b": 0.9989,
+          "delta_auc": 0.0004,
+          "z": 0.4224,
+          "p_value": 0.672767
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 2,
+          "a_wrong_b_right": 0,
+          "p_value": 0.5
+        },
+        "holm_adjusted_delong_p": 0.672767
+      },
+      "P2_vs_P4": {
+        "delong": {
+          "auc_a": 0.996,
+          "auc_b": 0.9989,
+          "delta_auc": -0.0029,
+          "z": -1.2811,
+          "p_value": 0.200166
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 2,
+          "a_wrong_b_right": 38,
+          "p_value": 0.0
+        },
+        "holm_adjusted_delong_p": 0.600498
+      },
+      "P3_vs_P4": {
+        "delong": {
+          "auc_a": 0.9997,
+          "auc_b": 0.9989,
+          "delta_auc": 0.0008,
+          "z": 0.9898,
+          "p_value": 0.322252
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 2,
+          "a_wrong_b_right": 0,
+          "p_value": 0.5
+        },
+        "holm_adjusted_delong_p": 0.644504
+      }
+    }
+  },
+  "E3_Pool_Expanded_87_Real_Healthy_Runs": {
+    "P1": {
+      "n_total": 279,
+      "healthy_runs_n0": 87,
+      "healthy_fp": 6,
+      "oof_healthy_far": 0.069,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0257,
+        0.1441
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.1316,
+      "fault_n1": 192,
+      "fault_tp": 164,
+      "oof_fault_recall": 0.8542,
+      "oof_fault_recall_95ci": [
+        0.7962,
+        0.9009
+      ],
+      "oof_roc_auc": 0.968,
+      "passes_far5_auc95": false,
+      "physical_bearings_n": 24,
+      "physical_bearings_fp": 3,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0266,
+        0.3236
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.2923
+    },
+    "P2": {
+      "n_total": 279,
+      "healthy_runs_n0": 87,
+      "healthy_fp": 1,
+      "oof_healthy_far": 0.0115,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0003,
+        0.0624
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.0534,
+      "fault_n1": 192,
+      "fault_tp": 158,
+      "oof_fault_recall": 0.8229,
+      "oof_fault_recall_95ci": [
+        0.7614,
+        0.8741
+      ],
+      "oof_roc_auc": 0.9658,
+      "passes_far5_auc95": true,
+      "physical_bearings_n": 24,
+      "physical_bearings_fp": 1,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0011,
+        0.2112
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.1829
+    },
+    "P3": {
+      "n_total": 279,
+      "healthy_runs_n0": 87,
+      "healthy_fp": 3,
+      "oof_healthy_far": 0.0345,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0072,
+        0.0975
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.0867,
+      "fault_n1": 192,
+      "fault_tp": 126,
+      "oof_fault_recall": 0.6562,
+      "oof_fault_recall_95ci": [
+        0.5844,
+        0.7231
+      ],
+      "oof_roc_auc": 0.9466,
+      "passes_far5_auc95": false,
+      "physical_bearings_n": 24,
+      "physical_bearings_fp": 3,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0266,
+        0.3236
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.2923
+    },
+    "P4": {
+      "n_total": 279,
+      "healthy_runs_n0": 87,
+      "healthy_fp": 3,
+      "oof_healthy_far": 0.0345,
+      "oof_healthy_far_95ci_two_sided": [
+        0.0072,
+        0.0975
+      ],
+      "oof_healthy_far_95ub_one_sided": 0.0867,
+      "fault_n1": 192,
+      "fault_tp": 137,
+      "oof_fault_recall": 0.7135,
+      "oof_fault_recall_95ci": [
+        0.644,
+        0.7763
+      ],
+      "oof_roc_auc": 0.9412,
+      "passes_far5_auc95": false,
+      "physical_bearings_n": 24,
+      "physical_bearings_fp": 2,
+      "physical_bearing_far_95ci_two_sided": [
+        0.0103,
+        0.27
+      ],
+      "physical_bearing_far_95ub_one_sided": 0.2398
+    },
+    "statistical_comparisons": {
+      "P1_vs_P4": {
+        "delong": {
+          "auc_a": 0.968,
+          "auc_b": 0.9412,
+          "delta_auc": 0.0268,
+          "z": 3.3799,
+          "p_value": 0.000725
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 28,
+          "a_wrong_b_right": 1,
+          "p_value": 0.0
+        },
+        "holm_adjusted_delong_p": 0.002175
+      },
+      "P2_vs_P4": {
+        "delong": {
+          "auc_a": 0.9658,
+          "auc_b": 0.9412,
+          "delta_auc": 0.0246,
+          "z": 2.7677,
+          "p_value": 0.005646
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 27,
+          "a_wrong_b_right": 6,
+          "p_value": 0.000324
+        },
+        "holm_adjusted_delong_p": 0.011292
+      },
+      "P3_vs_P4": {
+        "delong": {
+          "auc_a": 0.9466,
+          "auc_b": 0.9412,
+          "delta_auc": 0.0054,
+          "z": 0.6409,
+          "p_value": 0.521572
+        },
+        "mcnemar_fault_recall": {
+          "a_right_b_wrong": 16,
+          "a_wrong_b_right": 27,
+          "p_value": 0.126289
+        },
+        "holm_adjusted_delong_p": 0.521572
+      }
+    }
+  },
+  "E7_OpenSet_Patched_Weibull_Mahalanobis": {
+    "imbalance": {
+      "unseen_n": 333,
+      "binary_alarm_recall_on_unseen_fault": 1.0,
+      "openset_novelty_auroc": 0.9235
+    },
+    "horizontal-misalignment": {
+      "unseen_n": 197,
+      "binary_alarm_recall_on_unseen_fault": 1.0,
+      "openset_novelty_auroc": 0.857
+    }
+  }
+}
