@@ -30,8 +30,10 @@ This `public/` directory contains **only** vetted, non-confidential engineering 
 - [`REPRODUCE.md`](./REPRODUCE.md) - Step-by-step instructions to verify SHA-256 seals, re-run all 7 Lab Validation Gates, and critique known limitations.
 - [`AGENTS.md`](./AGENTS.md) - VLTHR Lab repository organization, anti-leakage data discipline, and scientific integrity policy.
 - [`evidence/LATEST_VALIDATION_SUMMARY.md`](./evidence/LATEST_VALIDATION_SUMMARY.md) - Executive 7-Gate verdict table with explicit `BENCHMARK_MEASURED` and `SIMULATED` badges.
+- [`evidence/V5_ROTATING_VIBRATION_VALIDATION_REPORT.md`](./evidence/V5_ROTATING_VIBRATION_VALIDATION_REPORT.md) & [`evidence/v5_patched_metrics.json`](./evidence/v5_patched_metrics.json) - APSENS v5 Cross-Rig Rotating-Vibration Validation (`HUST`, `University of Ottawa`, `XJTU-SY` 15 RTF bearings, and `MAFAULDA` 8-channel; `5/5` Hard-Stop Anti-Bias QA Gates, `1.15% - 3.70%` OOF Healthy FAR, `0.966 - 0.999` OOF ROC-AUC, `0` synthetic rows).
 - [`evidence/gates/`](./evidence/gates/) - Isolated per-gate evidence folders (`Gate_T1` through `Gate_T7`), each with `evidence.md`, `provenance.json`, `metrics.json`, and `artifacts/`.
 - [`audits/05_REFERENCE_VALIDATION_AND_BUG_AUDIT.md`](./audits/05_REFERENCE_VALIDATION_AND_BUG_AUDIT.md) - Transparent record of 9 defects (`BUG-01` to `BUG-09`) discovered in legacy reference code and verified fixes.
+- [`audits/07_V5_CODE_AND_METHODOLOGY_BUG_AUDIT.md`](./audits/07_V5_CODE_AND_METHODOLOGY_BUG_AUDIT.md) - Transparent record of 7 signal-physics and statistical-validation defects (`BUG-V5-01` to `BUG-V5-07`) uncovered and patched during the v5 review.
 - [`audits/06_COMMERCIAL_DATASET_REGISTRY_AND_HEADROOM.md`](./audits/06_COMMERCIAL_DATASET_REGISTRY_AND_HEADROOM.md) - Commercial license audit (`CC BY 4.0`, `CC0`, US Gov Public Domain) and DOIs.
 - [`audits/RAW_DOWNLOAD_RECEIPTS.json`](./audits/RAW_DOWNLOAD_RECEIPTS.json) - Cryptographic SHA-256 receipts and Zenodo/GitHub URLs for all raw `CC BY 4.0` datasets evaluated in `Gate_T4`.
 - [`audits/DATA_LINEAGE_HANDOFF.md`](./audits/DATA_LINEAGE_HANDOFF.md) - 3-Stage x 4-Substage anti-leakage data partition SHA-256 registry.
